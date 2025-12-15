@@ -1,0 +1,28 @@
+import React from 'react'
+
+export default function Apropos(){
+  return (
+    <>
+      <section className="banniere-apropos">
+        <h1>Apropos</h1>
+      </section>
+      <section className="texte-apropos">
+        <p>
+          Chez Écluse d’Azur, nous mettons à votre disposition tout le matériel nécessaire pour donner vie à vos événements,
+          qu’ils soient privés, professionnels ou festifs. Spécialisés dans la location de chaises, bâches, tables, tonnelles
+          et accessoires, nous vous proposons des équipements de qualité, propres et parfaitement entretenus.
+        </p>
+
+        <p>
+          Notre objectif est simple : vous offrir des solutions pratiques, fiables et adaptées, pour que votre événement se
+          déroule dans les meilleures conditions. Que vous organisiez une cérémonie, une réception, un meeting d’entreprise
+          ou une fête familiale, notre équipe reste à votre écoute afin de répondre rapidement à vos besoins.
+        </p>
+
+        <p>
+          Avec Écluse d’Azur, profitez d’un service sérieux, flexible et accessible, pour des événements réussis et sans stress.
+        </p>
+      </section>
+    </>
+  )
+}

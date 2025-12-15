@@ -1,5 +1,5 @@
 .body{
-    background-color: #edf0ea;
+    background-color: #e7ece2;
     margin: 15px;
     padding: 20px;
     width: auto;
@@ -27,9 +27,10 @@
     background-color: #91b4ca;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 200%;
-    bottom: 0;
+    position: relative;
+    width: 100%;
+    left: 0;
+    margin-top: 40px;
 }   
 .list-services{
     list-style-type: square;
@@ -80,6 +81,65 @@
 .liste-services-en-image li:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+.nav-links li a:focus,
+.navbar a:focus,
+.hamburger:focus,
+.contact-form input:focus,
+.contact-form button:focus{
+    outline: 3px solid rgba(51,74,96,0.25);
+    outline-offset: 3px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 420px;
+    margin: 20px auto;
+}
+.contact-form input{
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.contact-form button{
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: #334a60;
+    color: white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.contact-form button:hover{
+    background-color: #2a3f4f;
+}
+
+@media (max-width: 600px) {
+    .footer{
+        font-size: 14px;
+    }
+}
+
+.back-button{
+    position: relative;
+    display: inline-block;
+    margin: 14px 20px;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid rgba(51,74,96,0.15);
+    color: #334a60;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.back-button:hover{
+    background: rgba(51,74,96,0.06);
+}
+.back-button:active{
+    transform: translateY(1px);
 }
 .navbar {
     background-color: #91b4ca;
@@ -231,7 +291,7 @@
     }
 }
 .banniere-apropos {
-    width: 100%;
+    width: auto;
     height: 350px;
     background-image: url("image/apropos.jpeg");
     background-size: cover;
@@ -244,7 +304,7 @@
 }
 
 .banniere-apropos h1 {
-    color: white;
+    color: rgb(240, 238, 238);
     font-size: 3rem;
     font-weight: bold;
     background: rgba(0, 0, 0, 0.4);
