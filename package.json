@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node ./node_modules/vite/bin/vite.js",
+    "prebuild": "node ./scripts/copy-images.js",
     "build": "node ./node_modules/vite/bin/vite.js build",
     "preview": "node ./node_modules/vite/bin/vite.js preview"
   },
