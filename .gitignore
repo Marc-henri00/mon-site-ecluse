@@ -1,0 +1,21 @@
+# Node
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment
+.env
+
+# Logs
+logs/
+*.log
+
+# Vite / npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
