@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #e7ece2;
+    margin: 15px;
+    padding: 20px;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply bg-[#91b4ca] flex justify-between items-center px-8 py-4 sticky top-0 z-50 shadow-lg;
+  }
+
+  .nav-links {
+    @apply flex gap-8 list-none;
+  }
+
+  .nav-links a {
+    @apply text-white text-lg font-semibold px-3 py-2 rounded transition;
+  }
+
+  .nav-links a:hover {
+    @apply bg-[#6a8da3] scale-110;
+  }
+
+  .footer {
+    @apply bg-[#91b4ca] text-center py-4 mt-10;
+  }
+
+  .service-image-wrapper {
+    @apply h-[180px] overflow-hidden rounded-xl bg-gray-100;
+  }
+
+  .floating-cart {
+    @apply fixed bottom-5 right-5 bg-indigo-600 text-white p-4 rounded-xl shadow-2xl z-50;
+  }
+}
