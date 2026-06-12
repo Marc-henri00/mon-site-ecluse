@@ -18,7 +18,7 @@ export default function Navbar() {
           <span>Ecluse d'Azur</span>
         </div>
 
-        <ul className={`nav-links ${open ? 'show' : ''}`}>
+        <ul id="mobile-menu" className={`nav-links ${open ? 'show' : ''}`} aria-hidden={!open}>
           <li>
             <NavLink to="/apropos" className={({isActive}) => isActive ? 'active' : ''}>A propos</NavLink>
           </li>
@@ -36,7 +36,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <button className="hamburger" aria-label="Ouvrir le menu" aria-expanded={open} onClick={() => setOpen(!open)}>
+        <button className="hamburger" aria-label="Ouvrir le menu" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}>
           <span></span>
           <span></span>
           <span></span>

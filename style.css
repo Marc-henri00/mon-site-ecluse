@@ -274,23 +274,60 @@
 @media (max-width: 768px) {
 
     .hamburger {
-        display: flex;
+        display: flex !important;
+        z-index: 1100;
     }
 
+    /* Mobile: keep nav hidden by default so user taps hamburger to open it. */
     .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
+        position: static;
+        top: auto;
+        right: auto;
         background-color: #91b4ca;
         flex-direction: column;
-        width: 200px;
-        padding: 20px;
-        display: none;
+        width: 100%;
+        padding: 12px 18px;
+        display: none !important;
+        gap: 12px;
     }
 
     .nav-links.show {
-        display: flex;
-        animation: fadeDown 0.5s;
+        display: flex !important;
+        animation: fadeDown 0.35s;
+    }
+
+    /* Reduce banner height on small screens to avoid occupying whole viewport */
+    .banner {
+        height: 160px;
+        padding: 12px;
+    }
+
+    .banner h1 {
+        font-size: 1.6rem;
+    }
+
+    .banner p {
+        font-size: 0.95rem;
+    }
+
+    /* Smaller service image height for compact cards */
+    .service-image-wrapper {
+        height: 130px;
+    }
+
+    /* Make floating cart narrower on small screens to avoid overlap */
+    .floating-cart {
+        width: calc(100% - 40px);
+        left: 20px;
+        right: 20px;
+        bottom: 12px;
+        max-width: 420px;
+    }
+
+    /* Improve text readability */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
 .banniere-apropos {

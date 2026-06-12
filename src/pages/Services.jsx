@@ -57,20 +57,20 @@ export default function Services() {
   }
 
   return (
-    <section className="max-w-6xl mx-auto p-8 bg-[#eef2e6] min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-10">
+    <section className="max-w-6xl mx-auto p-6 bg-[#eef2e6]">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8">
         Nos Services
       </h1>
 
       {/* GRILLE DES ARTICLES */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {services.map(service => (
           <div
             key={service.id}
-            className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-xl transition"
+            className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-xl transition w-full"
           >
             {/* IMAGE AVEC ZOOM */}
-            <div className="w-full aspect-square rounded-xl overflow-hidden bg-gray-100">
+            <div className="w-full service-image-wrapper rounded-xl overflow-hidden bg-gray-100">
               <img
                 src={service.image}
                 alt={service.nom}
@@ -79,11 +79,11 @@ export default function Services() {
             </div>
 
             {/* INFOS */}
-            <h2 className="mt-4 text-lg font-semibold text-center">
+            <h2 className="mt-4 text-base sm:text-lg font-semibold text-center">
               {service.nom}
             </h2>
 
-            <p className="text-indigo-600 font-bold mt-1">
+            <p className="text-indigo-600 font-bold mt-1 text-sm sm:text-base">
               {service.prix.toLocaleString()} FCFA
             </p>
 
